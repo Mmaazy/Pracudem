@@ -26,9 +26,13 @@ function App() {
     },
   ];
 
+  const addExpenseHandler = (expenseData) =>{
+    console.log("From App.js", expenseData)
+  }
+
   return (
     <React.Fragment>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler}/>
       <Expenses items={expenses} />
     </React.Fragment>
   );
